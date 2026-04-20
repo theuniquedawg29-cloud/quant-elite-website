@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Quant-Elite - Advanced AI-Powered Math Quiz & Learning Platform">
+    <title>Quant-Elite - Master Math with AI Mentorship</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">Quant-Elite</div>
+            <ul class="nav-links">
+                <li><a href="#home" onclick="scrollToSection(event, 'home')">Home</a></li>
+                <li><a href="#features" onclick="scrollToSection(event, 'features')">Features</a></li>
+                <li><a href="#about" onclick="scrollToSection(event, 'about')">About</a></li>
+                <li><a href="#contact" onclick="scrollToSection(event, 'contact')">Contact</a></li>
+                <li><a href="privacy.html">Privacy Policy</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Quant-Elite</h1>
+                <p class="subtitle">Master Math with AI-Powered Learning</p>
+                <p class="description">An intelligent mobile platform that combines advanced mathematics quizzes with personalized AI mentorship, helping students learn faster and smarter.</p>
+                <div class="cta-buttons">
+                    <a href="#features" class="btn btn-primary">Learn More</a>
+                    <a href="#contact" class="btn btn-secondary">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <h2>Key Features</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🤖</div>
+                    <h3>Live Mentor AI</h3>
+                    <p>Get real-time guidance through voice-based AI mentorship that understands your questions and provides instant help.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎤</div>
+                    <h3>Voice-Powered Learning</h3>
+                    <p>Use speech-to-text to ask questions and listen to explanations with text-to-speech support in multiple languages.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📚</div>
+                    <h3>Comprehensive Quiz Library</h3>
+                    <p>Access a vast collection of math problems across multiple difficulty levels and topics.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🏆</div>
+                    <h3>Reward System</h3>
+                    <p>Earn coins for solving problems and unlock achievements as you progress through your learning journey.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>Performance Tracking</h3>
+                    <p>Track your quiz history, identify weak areas, and monitor your progress over time with detailed analytics.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🌐</div>
+                    <h3>Multi-Language Support</h3>
+                    <p>Learn in your preferred language with comprehensive multi-language support for explanations and content.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Quant-Elite</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Quant-Elite is a revolutionary AI-powered math learning platform designed to transform how students learn mathematics. Combining advanced quiz mechanics with intelligent AI mentorship, Quant-Elite provides personalized guidance tailored to each student's learning style and pace.</p>
+                    <p>Our mission is to make high-quality math education accessible to everyone by leveraging cutting-edge AI technology to provide real-time, personalized learning experiences that help students master mathematics with confidence.</p>
+                </div>
+                <div class="developer-section">
+                    <h3>Developer</h3>
+                    <p><strong>Santosh TechWorks</strong></p>
+                    <p>Passionate about education technology, AI-powered learning, and making quality math education accessible to everyone. Santosh TechWorks brings years of expertise in software development and educational innovation to create Quant-Elite.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Get In Touch</h2>
+            <form class="contact-form" onsubmit="handleFormSubmit(event)">
+                <div class="form-group">
+                    <input type="text" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <textarea placeholder="Your Message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Send Message</button>
+            </form>
+            <p class="form-message" id="formMessage"></p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Quant-Elite. All rights reserved.</p>
+            <p>Developed by <strong>Santosh TechWorks</strong></p>
+            <div class="footer-links">
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
