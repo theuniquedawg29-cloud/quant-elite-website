@@ -3,18 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Quant-Elite - Advanced AI-Powered Math Quiz & Learning Platform">
-    <title>Quant-Elite - Master Math with AI Mentorship</title>
+    <meta name="description" content="Santosh TechWorks - Innovative Technology Solutions">
+    <title>Santosh TechWorks - Digital Innovation</title>
     <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
-            <div class="logo">Quant-Elite</div>
+            <div class="logo">Santosh TechWorks</div>
             <ul class="nav-links">
                 <li><a href="#home" onclick="scrollToSection(event, 'home')">Home</a></li>
-                <li><a href="#features" onclick="scrollToSection(event, 'features')">Features</a></li>
+                <li><a href="#apps" onclick="scrollToSection(event, 'apps')">Apps</a></li>
+                <li><a href="#web-projects" onclick="scrollToSection(event, 'web-projects')">Websites</a></li>
+                <li><a href="#features" onclick="scrollToSection(event, 'features')">Services</a></li>
                 <li><a href="#about" onclick="scrollToSection(event, 'about')">About</a></li>
                 <li><a href="#contact" onclick="scrollToSection(event, 'contact')">Contact</a></li>
                 <li><a href="privacy.html">Privacy Policy</a></li>
@@ -31,12 +34,142 @@
     <section id="home" class="hero">
         <div class="container">
             <div class="hero-content">
-                <h1>Quant-Elite</h1>
-                <p class="subtitle">Master Math with AI-Powered Learning</p>
-                <p class="description">An intelligent mobile platform that combines advanced mathematics quizzes with personalized AI mentorship, helping students learn faster and smarter.</p>
+                <h1>Santosh TechWorks</h1>
+                <div class="scrolling-text">SANTOSH TECHWORKS</div>
+                <p class="subtitle">Innovative Technology Solutions</p>
+                <p class="description">Delivering cutting-edge digital solutions, web development, AI integration, and custom software tailored to your business needs.</p>
                 <div class="cta-buttons">
-                    <a href="#features" class="btn btn-primary">Learn More</a>
-                    <a href="#contact" class="btn btn-secondary">Get Started</a>
+                    <a href="#apps" class="btn btn-primary">Our Apps</a>
+                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Bar -->
+    <section class="stats-bar">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <span class="stat-number">10K+</span>
+                    <span class="stat-label">Active Users</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">4.8★</span>
+                    <span class="stat-label">App Rating</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">50+</span>
+                    <span class="stat-label">Web Projects</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">24/7</span>
+                    <span class="stat-label">AI Support</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Apps Section -->
+    <section id="apps" class="apps">
+        <div class="container">
+            <h2>Our Applications</h2>
+            <div class="app-showcase">
+                <div class="app-info">
+                    <div class="app-tag">Featured App</div>
+                    <h3>Quant-Elite</h3>
+                    <p class="app-description">Master mathematics with Quant-Elite, the ultimate preparation tool for competitive exams. Features interactive quizzes, AI-powered mentoring, and comprehensive tutorials.</p>
+
+                    <div class="app-features-list">
+                        <div class="app-feature-item">
+                            <span class="icon">🎯</span>
+                            <div>
+                                <strong>Competitive Mock Tests</strong>
+                                <p>Time-bound simulations tailored for GATE, CAT, and JEE standards.</p>
+                            </div>
+                        </div>
+                        <div class="app-feature-item">
+                            <span class="icon">🤖</span>
+                            <div>
+                                <strong>Siddhant: AI Math Mentor</strong>
+                                <p>Voice-enabled AI that provides plain-text, TTS-optimized explanations.</p>
+                            </div>
+                        </div>
+                        <div class="app-feature-item">
+                            <span class="icon">📊</span>
+                            <div>
+                                <strong>Performance Analysis</strong>
+                                <p>Real-time tracking of accuracy, speed, and coin-based rewards.</p>
+                            </div>
+                        </div>
+                        <div class="app-feature-item">
+                            <span class="icon">📚</span>
+                            <div>
+                                <strong>Smart Skill Tree</strong>
+                                <p>Gamified learning path with unlockable chapters and rewards.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="download-buttons">
+                        <a href="#" class="store-btn">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play">
+                        </a>
+                        <a href="https://www.indusappstore.com/" class="store-btn">
+                            <img src="https://raw.githubusercontent.com/IndusAppstore/brand-assets/main/badges/get-it-on-indus-appstore.png" alt="Get it on Indus Appstore" onerror="this.src='https://img.icons8.com/color/48/android-os.png'; this.parentElement.innerHTML+='<span>Indus Appstore</span>'">
+                        </a>
+                        <a href="https://uptodown.com/" class="store-btn">
+                            <img src="https://files.uptodown.com/static/images/uptodown-badge-en.png" alt="Download on Uptodown" onerror="this.src='https://img.icons8.com/color/48/download.png'; this.parentElement.innerHTML+='<span>Uptodown</span>'">
+                        </a>
+                    </div>
+                </div>
+                <div class="app-preview">
+                    <div class="phone-frame">
+                        <!-- Placeholder for App Screenshot -->
+                        <div class="screenshot-placeholder">
+                            <div class="logo">Quant-Elite</div>
+                            <span>App Screenshot</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Web Projects Section -->
+    <section id="web-projects" class="web-projects">
+        <div class="container">
+            <h2>Web Portfolio</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="placeholder-img">🛠️ Admin Dashboard</div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Quant-Elite Admin Panel</h3>
+                        <p>A centralized management tool to update the 34,000+ questions in main.dart, manage user accounts, and monitor AI mentor performance logs.</p>
+                        <a href="#" class="btn-link">Learn More →</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="placeholder-img">📈 Student Analytics</div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Performance Tracker</h3>
+                        <p>A web-based dashboard where students can view their detailed quiz history, coin balance, and accuracy trends across different math topics.</p>
+                        <a href="#" class="btn-link">Visit Portal →</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="placeholder-img">📚 Formula Library</div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Math Resource Hub</h3>
+                        <p>A public repository of mathematical formulas, theorem proofs, and PDF study guides that syncs directly with the mobile app's tutorial section.</p>
+                        <a href="#" class="btn-link">Explore Hub →</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -45,38 +178,67 @@
     <!-- Features Section -->
     <section id="features" class="features">
         <div class="container">
-            <h2>Key Features</h2>
+            <h2>Our Services</h2>
             <div class="features-grid">
                 <div class="feature-card">
+                    <div class="feature-icon">💻</div>
+                    <h3>Web Development</h3>
+                    <p>Custom websites and web applications built with modern technologies, responsive design, and optimal performance.</p>
+                </div>
+                <div class="feature-card">
                     <div class="feature-icon">🤖</div>
-                    <h3>Live Mentor AI</h3>
-                    <p>Get real-time guidance through voice-based AI mentorship that understands your questions and provides instant help.</p>
+                    <h3>AI Integration</h3>
+                    <p>Seamlessly integrate AI capabilities into your existing systems or build new AI-powered solutions.</p>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon">🎤</div>
-                    <h3>Voice-Powered Learning</h3>
-                    <p>Use speech-to-text to ask questions and listen to explanations with text-to-speech support in multiple languages.</p>
+                    <div class="feature-icon">📱</div>
+                    <h3>Mobile Apps</h3>
+                    <p>Native and cross-platform mobile applications for iOS and Android with intuitive user experiences.</p>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon">📚</div>
-                    <h3>Comprehensive Quiz Library</h3>
-                    <p>Access a vast collection of math problems across multiple difficulty levels and topics.</p>
+                    <div class="feature-icon">🔧</div>
+                    <h3>Custom Software</h3>
+                    <p>Tailored software solutions designed to meet your specific business requirements and workflows.</p>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon">🏆</div>
-                    <h3>Reward System</h3>
-                    <p>Earn coins for solving problems and unlock achievements as you progress through your learning journey.</p>
+                    <div class="feature-icon">☁️</div>
+                    <h3>Cloud Solutions</h3>
+                    <p>Scalable cloud infrastructure, deployment, and management services for modern businesses.</p>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon">📊</div>
-                    <h3>Performance Tracking</h3>
-                    <p>Track your quiz history, identify weak areas, and monitor your progress over time with detailed analytics.</p>
+                    <div class="feature-icon">🔒</div>
+                    <h3>Cybersecurity</h3>
+                    <p>Comprehensive security audits, implementation of best practices, and protection against digital threats.</p>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🌐</div>
-                    <h3>Multi-Language Support</h3>
-                    <p>Learn in your preferred language with comprehensive multi-language support for explanations and content.</p>
-                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tech Stack Section -->
+    <section class="tech-stack">
+        <div class="container">
+            <div class="tech-track">
+                <span>Flutter</span>
+                <span>Dart</span>
+                <span>Firebase</span>
+                <span>Google Cloud AI</span>
+                <span>Python</span>
+                <span>Node.js</span>
+                <span>React</span>
+                <span>TensorFlow</span>
+                <span>AWS</span>
+                <span>Docker</span>
+                <!-- Duplicate for seamless scroll -->
+                <span>Flutter</span>
+                <span>Dart</span>
+                <span>Firebase</span>
+                <span>Google Cloud AI</span>
+                <span>Python</span>
+                <span>Node.js</span>
+                <span>React</span>
+                <span>TensorFlow</span>
+                <span>AWS</span>
+                <span>Docker</span>
             </div>
         </div>
     </section>
@@ -84,17 +246,80 @@
     <!-- About Section -->
     <section id="about" class="about">
         <div class="container">
-            <h2>About Quant-Elite</h2>
+            <h2>About Santosh TechWorks</h2>
             <div class="about-content">
                 <div class="about-text">
-                    <p>Quant-Elite is a revolutionary AI-powered math learning platform designed to transform how students learn mathematics. Combining advanced quiz mechanics with intelligent AI mentorship, Quant-Elite provides personalized guidance tailored to each student's learning style and pace.</p>
-                    <p>Our mission is to make high-quality math education accessible to everyone by leveraging cutting-edge AI technology to provide real-time, personalized learning experiences that help students master mathematics with confidence.</p>
+                    <p>Santosh TechWorks is a leading innovation hub specializing in high-performance digital solutions. From AI-integrated mobile platforms like <strong>Quant-Elite</strong> to enterprise-grade web architectures, we bridge the gap between complex engineering and intuitive user experiences.</p>
+                    <p>Our methodology focuses on scalability, security, and the seamless integration of Generative AI to solve real-world challenges in education and commerce.</p>
                 </div>
                 <div class="developer-section">
-                    <h3>Developer</h3>
-                    <p><strong>Santosh TechWorks</strong></p>
-                    <p>Passionate about education technology, AI-powered learning, and making quality math education accessible to everyone. Santosh TechWorks brings years of expertise in software development and educational innovation to create Quant-Elite.</p>
+                    <h3>The Visionary</h3>
+                    <p><strong>Santosh</strong></p>
+                    <p>A Full-Stack Architect with a passion for AI-driven education. Santosh leads the technical direction of the firm, ensuring every line of code contributes to a faster, smarter, and more accessible digital future.</p>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3>What is Quant-Elite?</h3>
+                    <p>Quant-Elite is our flagship math learning app, featuring the Siddhant AI Mentor for personalized tutoring.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Do you offer custom AI solutions?</h3>
+                    <p>Yes, we specialize in integrating LLMs and custom AI models into existing business workflows.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>How can I download the apps?</h3>
+                    <p>Our applications are available on both the Google Play Store and Apple App Store via the links above.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Is technical support provided?</h3>
+                    <p>Absolutely. We provide comprehensive maintenance and 24/7 support for all our custom software solutions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <h2>What Our Users Say</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <p>"Quant-Elite changed how I prepare for exams. The AI Mentor 'Siddhant' explained complex probability concepts in plain English that I could finally understand!"</p>
+                    <div class="user-info">
+                        <strong>Arjun Mehta</strong>
+                        <span>GATE 2025 Aspirant</span>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p>"The coin-based system kept me motivated every single day. I've solved over 500 questions and my speed has increased by 40%."</p>
+                    <div class="user-info">
+                        <strong>Sarah Johnson</strong>
+                        <span>CAT Top Scorer</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>Stay Ahead in Tech</h2>
+                <p>Get the latest updates on our apps, new tutorials, and AI research delivered to your inbox.</p>
+                <form class="newsletter-form" onsubmit="handleNewsletterSubmit(event)">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+                <p id="newsletterMessage"></p>
             </div>
         </div>
     </section>
@@ -122,7 +347,7 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2026 Quant-Elite. All rights reserved.</p>
+            <p>&copy; 2026 Santosh TechWorks. All rights reserved.</p>
             <p>Developed by <strong>Santosh TechWorks</strong></p>
             <div class="footer-links">
                 <a href="privacy.html">Privacy Policy</a>
@@ -132,5 +357,6 @@
     </footer>
 
     <script src="script.js"></script>
+    <button id="backToTop" onclick="scrollToTop()">↑</button>
 </body>
 </html>

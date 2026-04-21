@@ -29,7 +29,7 @@ git push -u origin main
 ### 3. Enable GitHub Pages
 1. Go to your repository on GitHub
 2. Click "Settings" tab
-3. Scroll down to "Pages" section
+3. Scroll down to "Pages" sectionA
 4. Under "Source", select "Deploy from a branch"
 5. Select "main" branch and "/ (root)" folder
 6. Click "Save"
@@ -70,4 +70,15 @@ To use a custom domain:
 
 ---
 
-**Need help?** Check the [GitHub Pages documentation](https://docs.github.com/en/pages) or contact support@quantelitesupport@gmail.com
+## 📧 EmailJS Configuration (Fix Email Routing)
+If you are still receiving emails at your old address, you must update your **EmailJS Template**:
+
+1. Log in to [EmailJS Dashboard](https://dashboard.emailjs.com/).
+2. Go to **Email Templates** and select `template_zoxrq4d`.
+3. In the **Settings** tab (or the "To Email" field), change the value to: `{{to_email}}`.
+4. This allows the `script.js` to dynamically tell EmailJS to send the mail to `theuniquedawg29@gmail.com`.
+5. Click **Save**.
+
+---
+
+**Need help?** Check the [GitHub Pages documentation](https://docs.github.com/en/pages) or contact theuniquedawg29@gmail.com

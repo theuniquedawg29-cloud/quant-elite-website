@@ -169,7 +169,7 @@ Update the contact details and customize as needed for your actual policies.
 **Developer**: Santosh TechWorks
 
 For updates to the privacy policy or website, modify:
-- Privacy email: `quantelitesupport@gmail.com` (in privacy.html)
+- Privacy email: `theuniquedawg29@gmail.com` (in privacy.html)
 - Footer information (in index.html and privacy.html)
 
 ## 🎓 Browser Support
