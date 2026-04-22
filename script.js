@@ -131,8 +131,77 @@ function showFormMessage(message, type) {
     }
 }
 
-// Scroll animations
-const observerOptions = { threshold: 0.1 };
+// Chatbot Logic
+function toggleChatbot() {
+    const window = document.getElementById('chatbot-window');
+    const toggle = document.getElementById('chatbot-toggle');
+    if (window.style.display === 'flex') {
+        window.style.display = 'none';
+        toggle.style.display = 'flex';
+    } else {
+        window.style.display = 'flex';
+        toggle.style.display = 'none';
+    }
+}
+
+function handleChatKey(event) {
+    if (event.key === 'Enter') {
+        sendChatMessage();
+    }
+}
+
+function sendChatMessage() {
+    const input = document.getElementById('chat-input');
+    const container = document.getElementById('chat-messages');
+    const text = input.value.trim();
+
+    if (!text) return;
+
+    // Add user message
+    const userDiv = document.createElement('div');
+    userDiv.className = 'message user-msg';
+    userDiv.textContent = text;
+    container.appendChild(userDiv);
+
+    input.value = '';
+    container.scrollTop = container.scrollHeight;
+
+    // Bot Response Logic
+    setTimeout(() => {
+        const botDiv = document.createElement('div');
+        botDiv.className = 'message bot-msg';
+        botDiv.innerHTML = getBotResponse(text);
+        container.appendChild(botDiv);
+        container.scrollTop = container.scrollHeight;
+    }, 600);
+}
+
+function getBotResponse(input) {
+    const val = input.toLowerCase();
+
+    if (val.includes('hello') || val.includes('hi') || val.includes('नमस्ते') || val.includes('namaste')) {
+        return "नमस्ते! मैं आपकी कैसे मदद कर सकता हूँ? <br> Hello! How can I help you today?";
+    }
+
+    if (val.includes('quant-elite') || val.includes('app')) {
+        return "Quant-Elite हमारा प्रमुख मैथ लर्निंग ऐप है। आप इसे ऊपर दिए गए स्टोर लिंक से डाउनलोड कर सकते हैं। <br> Quant-Elite is our flagship math app. You can download it using the store links above.";
+    }
+
+    if (val.includes('contact') || val.includes('email') || val.includes('संपर्क')) {
+        return "आप हमें theuniquedawg29@gmail.com पर ईमेल कर सकते हैं। <br> You can email us at theuniquedawg29@gmail.com.";
+    }
+
+    if (val.includes('siddhant') || val.includes('ai')) {
+        return "मैं सिद्धांत हूँ, आपका AI असिस्टेंट। मैं मैथ प्रॉब्लम्स सुलझाने में आपकी मदद करता हूँ। <br> I am Siddhant, your AI assistant. I help you solve math problems.";
+    }
+
+    if (val.includes('price') || val.includes('free') || val.includes('फीस')) {
+        return "हमारा ऐप फ्री में उपलब्ध है, जिसमें प्रीमियम फीचर्स भी हैं। <br> Our app is available for free, with optional premium features.";
+    }
+
+    return "मुझे समझ नहीं आया। क्या आप फिर से पूछ सकते हैं? <br> I didn't quite get that. Could you please rephrase?";
+}
+
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {

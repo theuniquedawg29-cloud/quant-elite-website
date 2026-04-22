@@ -360,6 +360,33 @@
         </div>
     </footer>
 
+    <!-- Chatbot UI -->
+    <div id="chatbot-container" class="chatbot-container">
+        <div id="chatbot-window" class="chatbot-window">
+            <div class="chatbot-header">
+                <div class="bot-info">
+                    <span class="bot-status"></span>
+                    <strong>Siddhant (AI Manager)</strong>
+                </div>
+                <button onclick="toggleChatbot()" class="close-chat">&times;</button>
+            </div>
+            <div id="chat-messages" class="chat-messages">
+                <div class="message bot-msg">
+                    नमस्ते! मैं सिद्धांत हूँ, आपका वेबसाइट मैनेजर। मैं आपकी कैसे मदद कर सकता हूँ? <br><br>
+                    Hello! I'm Siddhant, your Website Manager. How can I assist you today?
+                </div>
+            </div>
+            <div class="chat-input-area">
+                <input type="text" id="chat-input" placeholder="Type a message... / संदेश लिखें..." onkeypress="handleChatKey(event)">
+                <button onclick="sendChatMessage()">➤</button>
+            </div>
+        </div>
+        <button id="chatbot-toggle" class="chatbot-toggle" onclick="toggleChatbot()">
+            <span class="chat-icon">💬</span>
+            <span class="chat-text">Chat with Siddhant</span>
+        </button>
+    </div>
+
     <script src="script.js"></script>
     <button id="backToTop" onclick="scrollToTop()">↑</button>
 </body>
