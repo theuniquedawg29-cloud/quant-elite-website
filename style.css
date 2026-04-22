@@ -861,6 +861,31 @@ body {
     border-bottom-right-radius: 2px;
 }
 
+.chat-suggestions {
+    padding: 10px 15px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    background: #f8fafc;
+    border-top: 1px solid #e2e8f0;
+}
+
+.chat-suggestions button {
+    background: white;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    padding: 6px 12px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.chat-suggestions button:hover {
+    background: var(--primary-color);
+    color: white;
+}
+
 .chat-input-area {
     padding: 15px;
     border-top: 1px solid #e2e8f0;

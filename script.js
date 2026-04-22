@@ -176,30 +176,49 @@ function sendChatMessage() {
     }, 600);
 }
 
+function sendSuggestedMessage(topic) {
+    let message = "";
+    if (topic === 'About Quant-Elite') message = "Tell me about Quant-Elite";
+    if (topic === 'How to Download') message = "How can I download the app?";
+    if (topic === 'Contact Support') message = "What is the support email?";
+    if (topic === 'AI Mentor') message = "Who is Siddhant?";
+    if (topic === 'Services') message = "What services does Quant-Elite and Santosh TechWorks offers?";
+    if (topic === 'Santosh') message = "Who is Santosh?";)
+    const input = document.getElementById('chat-input');
+    input.value = message;
+    sendChatMessage();
+}
+
 function getBotResponse(input) {
     const val = input.toLowerCase();
 
-    if (val.includes('hello') || val.includes('hi') || val.includes('नमस्ते') || val.includes('namaste')) {
-        return "नमस्ते! मैं आपकी कैसे मदद कर सकता हूँ? <br> Hello! How can I help you today?";
+    if (val.includes('hello') || val.includes('hi') || val.includes('नमस्ते')) {
+        return "नमस्ते! मैं सिद्धांत हूँ। आप नीचे दिए गए सुझावों (Suggestions) पर क्लिक करके भी जानकारी पा सकते हैं। <br> Hello! I'm Siddhant. You can also click the suggestions below to get quick info.";
     }
 
-    if (val.includes('quant-elite') || val.includes('app')) {
-        return "Quant-Elite हमारा प्रमुख मैथ लर्निंग ऐप है। आप इसे ऊपर दिए गए स्टोर लिंक से डाउनलोड कर सकते हैं। <br> Quant-Elite is our flagship math app. You can download it using the store links above.";
+    if (val.includes('quant-elite') || val.includes('about')) {
+        return "<strong>Quant-Elite</strong> एक एडवांस मैथ लर्निंग प्लेटफॉर्म है। इसमें 34,000+ सवाल, AI मेंटर और रियल-TIME मॉक टेस्ट हैं। <br> <strong>Quant-Elite</strong> is an advanced math learning platform featuring 34,000+ questions, an AI mentor, and real-time mock tests.";
     }
 
-    if (val.includes('contact') || val.includes('email') || val.includes('संपर्क')) {
-        return "आप हमें theuniquedawg29@gmail.com पर ईमेल कर सकते हैं। <br> You can email us at theuniquedawg29@gmail.com.";
+    if (val.includes('download') || val.includes('how to')) {
+        return "आप इसे <strong>Google Play Store</strong>, <strong>Indus Appstore</strong>, या <strong>Uptodown</strong> से डाउनलोड कर सकते हैं। लिंक ऊपर 'Apps' सेक्शन में उपलब्ध हैं। <br> You can download it via Google Play, Indus Appstore, or Uptodown. Links are in the 'Apps' section above.";
     }
 
-    if (val.includes('siddhant') || val.includes('ai')) {
-        return "मैं सिद्धांत हूँ, आपका AI असिस्टेंट। मैं मैथ प्रॉब्लम्स सुलझाने में आपकी मदद करता हूँ। <br> I am Siddhant, your AI assistant. I help you solve math problems.";
+    if (val.includes('email') || val.includes('support') || val.includes('contact')) {
+        return "हमसे संपर्क करने के लिए <strong>theuniquedawg29@gmail.com</strong> पर ईमेल करें। <br> For support, email us at <strong>theuniquedawg29@gmail.com</strong>.";
     }
 
-    if (val.includes('price') || val.includes('free') || val.includes('फीस')) {
-        return "हमारा ऐप फ्री में उपलब्ध है, जिसमें प्रीमियम फीचर्स भी हैं। <br> Our app is available for free, with optional premium features.";
+    if (val.includes('siddhant') || val.includes('who is')) {
+        return "मैं <strong>Siddhant</strong> हूँ, एक AI पावर्ड मेंटर। मैं Gemini 2.5 का उपयोग करके आपके गणित के सवालों का आसान जवाब देता हूँ। <br> I am <strong>Siddhant</strong>, an AI-powered mentor. I use Gemini 2.5 to provide easy math explanations.";
+    }
+    if (val.includes('services') || val.includes('Santosh TechWorks')) {
+        return "<strong>Quant-Elite</strong> provides expert math resources, while <strong>Santosh TechWorks</strong> offers IT solutions, software development, and digital innovation. <br> <strong>Quant-Elite</strong> गणित के संसाधन प्रदान करता है, और <strong>Santosh TechWorks</strong> आईटी समाधान और सॉफ्टवेयर विकास सेवाएं प्रदान करता है।";
+    }
+      if (val.includes('santosh') || val.includes('who is')) {
+         return "<strong>Santosh Choubey</strong> is a passionate developer and the visionary founder of Santosh TechWorks. He is dedicated to creating the comprehensive <strong>Quant-Elite</strong> application, focusing on cross-platform development and digital innovation to make quality education accessible. <br> <strong>संतोष चौबे</strong> एक उत्साही डेवलपर और Santosh TechWorks के संस्थापक हैं। उन्होंने <strong>Quant-Elite</strong> जैसे व्यापक एप्लिकेशन को विकसित करने में अपना पूरा प्रयास लगाया है, जो क्रॉस-प्लेटफॉर्म और डिजिटल नवाचार पर आधारित है।";
     }
 
-    return "मुझे समझ नहीं आया। क्या आप फिर से पूछ सकते हैं? <br> I didn't quite get that. Could you please rephrase?";
+    return "माफ़ कीजिये, मैं इसे समझ नहीं पाया। कृपया 'Support Email' जैसे बटन का उपयोग करें। <br> Sorry, I didn't catch that. Please use buttons like 'Support Email' for better assistance.";
 }
 
 const observer = new IntersectionObserver((entries) => {
