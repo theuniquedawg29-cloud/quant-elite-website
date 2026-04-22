@@ -133,14 +133,16 @@ function showFormMessage(message, type) {
 
 // Chatbot Logic
 function toggleChatbot() {
-    const window = document.getElementById('chatbot-window');
-    const toggle = document.getElementById('chatbot-toggle');
-    if (window.style.display === 'flex') {
-        window.style.display = 'none';
-        toggle.style.display = 'flex';
+    const chatWindow = document.getElementById('chatbot-window');
+    const chatToggle = document.getElementById('chatbot-toggle');
+
+    // Check current display state
+    if (chatWindow.style.display === 'none' || chatWindow.style.display === '') {
+        chatWindow.style.display = 'flex';
+        chatToggle.style.display = 'none';
     } else {
-        window.style.display = 'flex';
-        toggle.style.display = 'none';
+        chatWindow.style.display = 'none';
+        chatToggle.style.display = 'flex';
     }
 }
 
