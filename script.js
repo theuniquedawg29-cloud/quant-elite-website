@@ -192,35 +192,86 @@ function sendSuggestedMessage(topic) {
 }
 
 function getBotResponse(input) {
-    const val = input.toLowerCase();
+    const val = input.toLowerCase().trim();
 
-    if (val.includes('hello') || val.includes('hi') || val.includes('नमस्ते')) {
-        return "नमस्ते! मैं सिद्धांत हूँ। आप नीचे दिए गए सुझावों (Suggestions) पर क्लिक करके भी जानकारी पा सकते हैं। <br> Hello! I'm Siddhant. You can also click the suggestions below to get quick info.";
+    const isHindi =
+        /[ऀ-ॿ]/.test(input) ||
+        val.includes('नमस्ते') ||
+        val.includes('कैसे') ||
+        val.includes('क्या') ||
+        val.includes('संतोष');
+
+    const reply = {
+        greet: isHindi
+            ? "नमस्ते! मैं <strong>सिद्धांत</strong> हूँ — Quant-Elite का AI सहायक। आप मुझसे ऐप, डाउनलोड, सपोर्ट, सेवाएँ या संतोष जी के बारे में पूछ सकते हैं। नीचे दिए गए सुझावों पर क्लिक करके भी जल्दी जानकारी पा सकते हैं।"
+            : "Hello! I’m <strong>Siddhant</strong> — your AI helper for Quant-Elite. You can ask me about the app, downloads, support, services, or Santosh. You can also use the suggestions below for quick help.",
+
+        about: isHindi
+            ? "<strong>Quant-Elite</strong> एक advanced math learning platform है, जहाँ आपको 34,000+ questions, AI mentor support, और real-time mock tests मिलते हैं।"
+            : "<strong>Quant-Elite</strong> is an advanced math learning platform with 34,000+ questions, AI mentor support, and real-time mock tests.",
+
+        download: isHindi
+            ? "आप <strong>Quant-Elite</strong> को <strong>Google Play Store</strong>, <strong>Indus Appstore</strong>, और <strong>Uptodown</strong> से डाउनलोड कर सकते हैं। डाउनलोड लिंक ऊपर <strong>Apps</strong> सेक्शन में दिए गए हैं।"
+            : "You can download <strong>Quant-Elite</strong> from <strong>Google Play Store</strong>, <strong>Indus Appstore</strong>, or <strong>Uptodown</strong>. The download links are available in the <strong>Apps</strong> section above.",
+
+        contact: isHindi
+            ? "सपोर्ट या किसी भी सहायता के लिए हमें <strong>theuniquedawg29@gmail.com</strong> पर ईमेल करें। मैं चाहूँ तो आपको सही सेक्शन तक भी गाइड कर सकता हूँ।"
+            : "For support or any help, email us at <strong>theuniquedawg29@gmail.com</strong>. I can also guide you to the right section if you want.",
+
+        siddhant: isHindi
+            ? "मैं <strong>सिद्धांत</strong> हूँ — Quant-Elite का AI-powered mentor. मैं आपके सवालों को आसान भाषा में समझाने और सही जानकारी तक पहुँचने में मदद करता हूँ।"
+            : "I’m <strong>Siddhant</strong> — the AI-powered mentor of Quant-Elite. I help explain things in simple language and guide you to the right information.",
+
+        services: isHindi
+            ? "<strong>Quant-Elite</strong> maths learning resources और AI guidance प्रदान करता है, जबकि <strong>Santosh TechWorks</strong> software development, IT solutions, और digital innovation services देता है।"
+            : "<strong>Quant-Elite</strong> provides math learning resources and AI guidance, while <strong>Santosh TechWorks</strong> offers software development, IT solutions, and digital innovation services.",
+
+        santosh: isHindi
+            ? "<strong>संतोष चौबे</strong> एक passionate developer और <strong>Santosh TechWorks</strong> के founder हैं। उन्होंने <strong>Quant-Elite</strong> जैसे educational platform को vision के साथ बनाया है।"
+            : "<strong>Santosh Choubey</strong> is a passionate developer and the founder of <strong>Santosh TechWorks</strong>. He is building <strong>Quant-Elite</strong> as a vision-driven educational platform.",
+
+        who: isHindi
+            ? "मैं <strong>सिद्धांत</strong> हूँ, आपका AI assistant. आप मुझसे Quant-Elite, downloads, support, services, या Santosh के बारे में पूछ सकते हैं।"
+            : "I’m <strong>Siddhant</strong>, your AI assistant. You can ask me about Quant-Elite, downloads, support, services, or Santosh.",
+
+        fallback: isHindi
+            ? "माफ़ कीजिए, मैं आपकी बात पूरी तरह समझ नहीं पाया। आप ये पूछ सकते हैं: <br><strong>• Quant-Elite क्या है?</strong><br><strong>• App download कैसे करें?</strong><br><strong>• Support email क्या है?</strong><br><strong>• Santosh TechWorks क्या करता है?</strong>"
+            : "Sorry, I didn’t fully understand that. You can ask things like: <br><strong>• What is Quant-Elite?</strong><br><strong>• How do I download the app?</strong><br><strong>• What is the support email?</strong><br><strong>• What does Santosh TechWorks do?</strong>"
+    };
+
+    if (/(^|\s)(hello|hi|hey)(\s|$)|नमस्ते/.test(val)) {
+        return reply.greet;
     }
 
-    if (val.includes('quant-elite') || val.includes('about')) {
-        return "<strong>Quant-Elite</strong> एक एडवांस मैथ लर्निंग प्लेटफॉर्म है। इसमें 34,000+ सवाल, AI मेंटर और रियल-TIME मॉक टेस्ट हैं। <br> <strong>Quant-Elite</strong> is an advanced math learning platform featuring 34,000+ questions, an AI mentor, and real-time mock tests.";
+    if (val.includes('quant-elite') || val.includes('about') || val.includes('what is quant-elite') || val.includes('quant elite')) {
+        return reply.about;
     }
 
-    if (val.includes('download') || val.includes('how to')) {
-        return "आप इसे <strong>Google Play Store</strong>, <strong>Indus Appstore</strong>, या <strong>Uptodown</strong> से डाउनलोड कर सकते हैं। लिंक ऊपर 'Apps' सेक्शन में उपलब्ध हैं। <br> You can download it via Google Play, Indus Appstore, or Uptodown. Links are in the 'Apps' section above.";
+    if (val.includes('download') || val.includes('how to download') || val.includes('install') || val.includes('कैसे डाउनलोड')) {
+        return reply.download;
     }
 
-    if (val.includes('email') || val.includes('support') || val.includes('contact')) {
-        return "हमसे संपर्क करने के लिए <strong>theuniquedawg29@gmail.com</strong> पर ईमेल करें। <br> For support, email us at <strong>theuniquedawg29@gmail.com</strong>.";
+    if (val.includes('email') || val.includes('support') || val.includes('contact') || val.includes('help')) {
+        return reply.contact;
     }
 
-    if (val.includes('siddhant') || val.includes('who is')) {
-        return "मैं <strong>Siddhant</strong> हूँ, एक AI पावर्ड मेंटर। मैं Gemini 2.5 का उपयोग करके आपके गणित के सवालों का आसान जवाब देता हूँ। <br> I am <strong>Siddhant</strong>, an AI-powered mentor. I use Gemini 2.5 to provide easy math explanations.";
-    }
-    if (val.includes('services') || val.includes('Santosh TechWorks')) {
-        return "<strong>Quant-Elite</strong> provides expert math resources, while <strong>Santosh TechWorks</strong> offers IT solutions, software development, and digital innovation. <br> <strong>Quant-Elite</strong> गणित के संसाधन प्रदान करता है, और <strong>Santosh TechWorks</strong> आईटी समाधान और सॉफ्टवेयर विकास सेवाएं प्रदान करता है।";
-    }
-      if (val.includes('santosh') || val.includes('who is')) {
-         return "<strong>Santosh Choubey</strong> is a passionate developer and the visionary founder of Santosh TechWorks. He is dedicated to creating the comprehensive <strong>Quant-Elite</strong> application, focusing on cross-platform development and digital innovation to make quality education accessible. <br> <strong>संतोष चौबे</strong> एक उत्साही डेवलपर और Santosh TechWorks के संस्थापक हैं। उन्होंने <strong>Quant-Elite</strong> जैसे व्यापक एप्लिकेशन को विकसित करने में अपना पूरा प्रयास लगाया है, जो क्रॉस-प्लेटफॉर्म और डिजिटल नवाचार पर आधारित है।";
+    if (val.includes('siddhant') || val.includes('सिद्धांत')) {
+        return reply.siddhant;
     }
 
-    return "माफ़ कीजिये, मैं इसे समझ नहीं पाया। कृपया 'Support Email' जैसे बटन का उपयोग करें। <br> Sorry, I didn't catch that. Please use buttons like 'Support Email' for better assistance.";
+    if (val.includes('services') || val.includes('santosh techworks') || val.includes('techworks')) {
+        return reply.services;
+    }
+
+    if (val.includes('santosh') || val.includes('संतोष')) {
+        return reply.santosh;
+    }
+
+    if (val.includes('who is') || val.includes('who are you') || val.includes('तुम कौन हो') || val.includes('आप कौन हैं')) {
+        return reply.who;
+    }
+
+    return reply.fallback;
 }
 
 const observer = new IntersectionObserver((entries) => {
