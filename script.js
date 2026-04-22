@@ -183,7 +183,7 @@ function sendSuggestedMessage(topic) {
     if (topic === 'Contact Support') message = "What is the support email?";
     if (topic === 'AI Mentor') message = "Who is Siddhant?";
     if (topic === 'Services') message = "What services does Quant-Elite and Santosh TechWorks offers?";
-    if (topic === 'Santosh') message = "Who is Santosh?";)
+    if (topic === 'Santosh') message = "Who is Santosh?";
     const input = document.getElementById('chat-input');
     input.value = message;
     sendChatMessage();
