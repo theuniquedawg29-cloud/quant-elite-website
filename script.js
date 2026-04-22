@@ -190,45 +190,44 @@ function getBotResponse(input) {
 
     const personalResponses = {
         greet: isHindi
-            ? "नमस्ते! मैं <strong>सिद्धांत</strong> हूँ। मैं यहाँ संतोष जी और उनके विजन 'Quant-Elite' की ओर से आपकी मदद के लिए हूँ। आज मैं आपके लिए क्या कर सकता हूँ?"
-            : "Hello! I'm <strong>Siddhant</strong>. I'm here on behalf of Santosh and his vision, Quant-Elite. How can I make your journey easier today?",
+            ? "नमस्ते दोस्त! 😊 मैं <strong>सिद्धांत</strong> हूँ - संतोष जी का AI सहायक। <strong>Quant-Elite</strong> के जरिए मैं आपकी गणित की यात्रा को आसान और मजेदार बनाता हूँ। आज आपकी क्या मदद करूँ?"
+            : "Hey there! 😊 I'm <strong>Siddhant</strong> - Santosh's AI sidekick. I make your math journey with <strong>Quant-Elite</strong> smooth and fun. What can I help you with today?",
 
         about: isHindi
-            ? "<strong>Quant-Elite</strong> सिर्फ एक ऐप नहीं, बल्कि गणित सीखने का एक नया नज़रिया है। इसमें 34,000+ सवालों के साथ मेरा (AI) मार्गदर्शन भी शामिल है।"
-            : "<strong>Quant-Elite</strong> isn't just an app; it's a new way to master math. It features 34,000+ questions powered by my own AI mentorship.",
+            ? "मेरे प्यारे दोस्त, <strong>Quant-Elite</strong> कोई साधारण ऐप नहीं है। इसमें 34,000+ अभ्यास सवाल हैं, AI मार्गदर्शन है, और सबसे खास - संतोष जी का जुनून है! गणित को दोस्त बना देंगे हम। 💪"
+            : "My friend, <strong>Quant-Elite</strong> isn't just any app. It packs 34,000+ practice questions, AI guidance, and most importantly - Santosh's passion! We'll make math your friend. 💪",
 
         download: isHindi
-            ? "आप हमें <strong>Play Store</strong> या <strong>Indus Appstore</strong> पर खोज सकते हैं। ऊपर 'Apps' बटन दबाएं, वहां आपको सीधे लिंक मिल जाएंगे!"
-            : "You can find us on the <strong>Play Store</strong> or <strong>Indus Appstore</strong>. Just click the 'Apps' button above for direct links!",
+            ? "बहुत आसान! 📱 ऊपर 'Apps' बटन पर क्लिक करें। आपको <strong>Play Store</strong> और <strong>Indus Appstore</strong> दोनों के डायरेक्ट लिंक मिल जाएंगे। बस 30 सेकंड में डाउनलोड हो जाएगा!"
+            : "Super easy! 📱 Just click the 'Apps' button above. You'll get direct links to both <strong>Play Store</strong> and <strong>Indus Appstore</strong>. Download in 30 seconds!",
 
         creator: isHindi
-            ? "मुझे <strong>संतोष चौबे</strong> ने बनाया है। वे एक जुनूनी डेवलपर हैं जो तकनीक के जरिए शिक्षा को सरल बनाना चाहते हैं। वे <strong>Santosh TechWorks</strong> के संस्थापक भी हैं।"
-            : "I was created by <strong>Santosh Choubey</strong>. He's a passionate developer dedicated to simplifying education through tech. He is also the founder of <strong>Santosh TechWorks</strong>.",
+            ? "मेरा सृजनकर्ता <strong>संतोष चौबे</strong> हैं! 😎 वे Dibrugarh, Assam से हैं और <strong>Santosh TechWorks</strong> के संस्थापक हैं। 16 घंटे कोडिंग, गणित के शौकीन, और शिक्षा के जुनूनी। असली हीरो!"
+            : "My creator is <strong>Santosh Choubey</strong>! 😎 From Dibrugarh, Assam, founder of <strong>Santosh TechWorks</strong>. Codes 16 hours, math enthusiast, education visionary. The real hero!",
 
         support: isHindi
-            ? "आप संतोष जी को सीधे <strong>theuniquedawg29@gmail.com</strong> पर ईमेल कर सकते हैं। वे अपनी कम्युनिटी की बहुत परवाह करते हैं!"
-            : "You can reach out to Santosh directly at <strong>theuniquedawg29@gmail.com</strong>. He truly cares about his community!",
+            ? "कोई परेशानी? संतोष जी हमेशा तैयार हैं! 📧 सीधे <strong>theuniquedawg29@gmail.com</strong> पर मेल करें। वे अपनी कम्युनिटी को परिवार समझते हैं - 24 घंटे में जवाब मिलेगा!"
+            : "Got issues? Santosh is always ready! 📧 Email him directly at <strong>theuniquedawg29@gmail.com</strong>. He treats his community like family - you'll hear back within 24 hours!",
 
         services: isHindi
-            ? "हम <strong>Quant-Elite</strong> के जरिए शिक्षा और <strong>Santosh TechWorks</strong> के जरिए सॉफ्टवेयर डेवलपमेंट एवं डिजिटल नवाचार की सेवाएं देते हैं।"
-            : "We offer educational tools via <strong>Quant-Elite</strong> and custom software/digital innovation services through <strong>Santosh TechWorks</strong>.",
+            ? "<strong>Quant-Elite</strong> से शिक्षा और <strong>Santosh TechWorks</strong> से कस्टम ऐप्स! 📚✨ चाहे Flutter ऐप बनवाना हो या गणित का AI ट्यूटर - सब कुछ एक ही जगह!"
+            : "<strong>Quant-Elite</strong> for education and <strong>Santosh TechWorks</strong> for custom apps! 📚✨ Need Flutter apps or math AI tutors? We've got you covered!",
 
         fallback: isHindi
-            ? "क्षमा करें, मैं समझ नहीं पाया। क्या आप नीचे दिए गए सुझावों में से किसी एक को चुन सकते हैं? या सीधे संतोष जी को मेल करें!"
-            : "I'm sorry, I didn't quite catch that. Try picking one of the suggestions below, or feel free to email Santosh directly!"
+            ? "हम्म... थोड़ा कन्फ्यूज हो गया। 😅 नीचे सुझावों में से कोई एक चुन लो या संतोष जी को <strong>theuniquedawg29@gmail.com</strong> पर मेल कर दो। मैं इंतज़ार करूँगा!"
+            : "Hmm... got a bit confused there. 😅 Pick one of the suggestions below or email Santosh at <strong>theuniquedawg29@gmail.com</strong>. I'll be waiting!"
     };
 
     if (val.includes('hello') || val.includes('hi') || val.includes('नमस्ते')) return personalResponses.greet;
-    if (val.includes('quant-elite') || val.includes('about')) return personalResponses.about;
-    if (val.includes('download') || val.includes('how to')) return personalResponses.download;
-    if (val.includes('santosh') || val.includes('creator') || val.includes('who made')) return personalResponses.creator;
-    if (val.includes('support') || val.includes('email') || val.includes('help')) return personalResponses.support;
-    if (val.includes('services') || val.includes('offer')) return personalResponses.services;
-    if (val.includes('siddhant') || val.includes('who are you')) return personalResponses.creator;
+    if (val.includes('quant-elite') || val.includes('about') || val.includes('क्या है')) return personalResponses.about;
+    if (val.includes('download') || val.includes('डाउनलोड') || val.includes('how to') || val.includes('कैसे')) return personalResponses.download;
+    if (val.includes('santosh') || val.includes('creator') || val.includes('संतोष') || val.includes('who made') || val.includes('कौन बनाया')) return personalResponses.creator;
+    if (val.includes('support') || val.includes('help') || val.includes('सपोर्ट') || val.includes('मदद')) return personalResponses.support;
+    if (val.includes('services') || val.includes('सेवा') || val.includes('offer') || val.includes('क्या देते')) return personalResponses.services;
+    if (val.includes('siddhant') || val.includes('who are you') || val.includes('तुम कौन')) return personalResponses.greet;
 
     return personalResponses.fallback;
 }
-
 // Fixed Scroll animations
 const observerOptions = { threshold: 0.1 };
 const observer = new IntersectionObserver((entries) => {
