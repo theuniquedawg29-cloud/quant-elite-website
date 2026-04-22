@@ -190,32 +190,90 @@ function getBotResponse(input) {
 
     const personalResponses = {
         greet: isHindi
-            ? "नमस्ते दोस्त! 😊 मैं <strong>सिद्धांत</strong> हूँ - संतोष जी का AI सहायक। <strong>Quant-Elite</strong> के जरिए मैं आपकी गणित की यात्रा को आसान और मजेदार बनाता हूँ। आज आपकी क्या मदद करूँ?"
-            : "Hey there! 😊 I'm <strong>Siddhant</strong> - Santosh's AI sidekick. I make your math journey with <strong>Quant-Elite</strong> smooth and fun. What can I help you with today?",
+            ? `नमस्ते! मैं <strong>सिद्धांत</strong> हूँ, संतोष टेकवर्क्स का AI मैनेजर। 😊<br><br>
+               मैं यहाँ आपकी सहायता के लिए हूँ। आप मुझसे <strong>Quant-Elite</strong> ऐप, हमारी <strong>वेबसाइट सेवाओं</strong>, या हमारे संस्थापक <strong>संतोष जी</strong> के बारे में पूछ सकते हैं।<br><br>
+               आज मैं आपकी किस प्रकार मदद कर सकता हूँ?`
+            : `Hello! I'm <strong>Siddhant</strong>, the AI Manager at Santosh TechWorks. 😊<br><br>
+               I'm here to guide you through our ecosystem. You can ask me about the <strong>Quant-Elite</strong> app, our <strong>development services</strong>, or the vision of our founder, <strong>Santosh</strong>.<br><br>
+               How can I assist you today?`,
 
         about: isHindi
-            ? "मेरे प्यारे दोस्त, <strong>Quant-Elite</strong> कोई साधारण ऐप नहीं है। इसमें 34,000+ अभ्यास सवाल हैं, AI मार्गदर्शन है, और सबसे खास - संतोष जी का जुनून है! गणित को दोस्त बना देंगे हम। 💪"
-            : "My friend, <strong>Quant-Elite</strong> isn't just any app. It packs 34,000+ practice questions, AI guidance, and most importantly - Santosh's passion! We'll make math your friend. 💪",
+            ? `<strong>Quant-Elite</strong> गणित सीखने का एक क्रांतिकारी प्लेटफॉर्म है:<br><br>
+               • <strong>34,000+ प्रश्न:</strong> GATE, CAT और JEE के स्तर के अभ्यास सवाल।<br>
+               • <strong>AI मेंटर:</strong> मैं (सिद्धांत) आपको हर सवाल का विस्तृत समाधान दूंगा।<br>
+               • <strong>गेमिफिकेशन:</strong> सिक्के जीतें, नए अध्याय अनलॉक करें और अपनी रैंक सुधारें।<br>
+               • <strong>रीयल-टाइम एनालिसिस:</strong> अपनी गति और सटीकता को ट्रैक करें।<br><br>
+               क्या आप इसे आज़माना चाहेंगे?`
+            : `<strong>Quant-Elite</strong> is a revolutionary math learning platform designed for excellence:<br><br>
+               • <strong>34,000+ Questions:</strong> Extensive practice material for GATE, CAT, and JEE standards.<br>
+               • <strong>AI Mentorship:</strong> I (Siddhant) provide voice-enabled, plain-text explanations for every problem.<br>
+               • <strong>Gamification:</strong> Earn coins, unlock chapters, and climb the leaderboard.<br>
+               • <strong>Performance Analytics:</strong> Deep insights into your speed and accuracy trends.<br><br>
+               Would you like to know how to get started?`,
 
         download: isHindi
-            ? "बहुत आसान! 📱 ऊपर 'Apps' बटन पर क्लिक करें। आपको <strong>Play Store</strong> और <strong>Indus Appstore</strong> दोनों के डायरेक्ट लिंक मिल जाएंगे। बस 30 सेकंड में डाउनलोड हो जाएगा!"
-            : "Super easy! 📱 Just click the 'Apps' button above. You'll get direct links to both <strong>Play Store</strong> and <strong>Indus Appstore</strong>. Download in 30 seconds!",
+            ? `आप <strong>Quant-Elite</strong> को इन प्लेटफॉर्म्स से डाउनलोड कर सकते हैं:<br><br>
+               1. <strong>Google Play Store:</strong> एंड्रॉइड यूज़र्स के लिए मुख्य स्टोर।<br>
+               2. <strong>Indus Appstore:</strong> भारत का अपना ऐप स्टोर।<br>
+               3. <strong>Uptodown:</strong> डायरेक्ट APK डाउनलोड के लिए।<br><br>
+               डाउनलोड करने के लिए ऊपर <strong>'Our Apps'</strong> सेक्शन पर जाएँ!`
+            : `You can download <strong>Quant-Elite</strong> from the following platforms:<br><br>
+               1. <strong>Google Play Store:</strong> The primary destination for Android users.<br>
+               2. <strong>Indus Appstore:</strong> India's homegrown app marketplace.<br>
+               3. <strong>Uptodown:</strong> For direct APK downloads and updates.<br><br>
+               Simply scroll up to the <strong>'Our Apps'</strong> section for direct links!`,
 
         creator: isHindi
-            ? "मेरा सृजनकर्ता <strong>संतोष चौबे</strong> हैं! 😎 वे Dibrugarh, Assam से हैं और <strong>Santosh TechWorks</strong> के संस्थापक हैं। 16 घंटे कोडिंग, गणित के शौकीन, और शिक्षा के जुनूनी। असली हीरो!"
-            : "My creator is <strong>Santosh Choubey</strong>! 😎 From Dibrugarh, Assam, founder of <strong>Santosh TechWorks</strong>. Codes 16 hours, math enthusiast, education visionary. The real hero!",
+            ? `<strong>संतोष चौबे</strong> Santosh TechWorks के पीछे के विजनरी हैं। 👨‍💻<br><br>
+               • <strong>स्थान:</strong> डिब्रूगढ़, असम से।<br>
+               • <strong>विशेषज्ञता:</strong> Full-Stack Architect और AI स्पेशलिस्ट।<br>
+               • <strong>मिशन:</strong> कठिन से कठिन गणित को AI के माध्यम से हर छात्र के लिए सुलभ बनाना।<br><br>
+               वे व्यक्तिगत रूप से हर फीडबैक को पढ़ते हैं। आप उन्हें <strong>theuniquedawg29@gmail.com</strong> पर लिख सकते हैं।`
+            : `<strong>Santosh Choubey</strong> is the visionary behind Santosh TechWorks. 👨‍💻<br><br>
+               • <strong>Location:</strong> Based in Dibrugarh, Assam.<br>
+               • <strong>Expertise:</strong> Full-Stack Architect and AI Integration Specialist.<br>
+               • <strong>Mission:</strong> Democratizing advanced mathematics through personalized AI tutoring.<br><br>
+               He personally oversees all development. You can reach him at <strong>theuniquedawg29@gmail.com</strong>.`,
 
         support: isHindi
-            ? "कोई परेशानी? संतोष जी हमेशा तैयार हैं! 📧 सीधे <strong>theuniquedawg29@gmail.com</strong> पर मेल करें। वे अपनी कम्युनिटी को परिवार समझते हैं - 24 घंटे में जवाब मिलेगा!"
-            : "Got issues? Santosh is always ready! 📧 Email him directly at <strong>theuniquedawg29@gmail.com</strong>. He treats his community like family - you'll hear back within 24 hours!",
+            ? `सहायता चाहिए? हम यहाँ हैं! 🤝<br><br>
+               • <strong>ईमेल:</strong> theuniquedawg29@gmail.com पर हमें लिखें।<br>
+               • <strong>समय:</strong> हम आमतौर पर 24 घंटे के भीतर जवाब देते हैं।<br>
+               • <strong>विषय:</strong> ऐप में बग रिपोर्ट, नए फीचर सुझाव, या व्यावसायिक पूछताछ।<br><br>
+               आप नीचे दिए गए संपर्क फ़ॉर्म का भी उपयोग कर सकते हैं!`
+            : `Need assistance? We've got your back! 🤝<br><br>
+               • <strong>Email:</strong> Reach out to <strong>theuniquedawg29@gmail.com</strong>.<br>
+               • <strong>Response Time:</strong> We typically respond within 24 hours.<br>
+               • <strong>Scope:</strong> Bug reports, feature requests, or business collaborations.<br><br>
+               You can also use the contact form at the bottom of this page!`,
 
         services: isHindi
-            ? "<strong>Quant-Elite</strong> से शिक्षा और <strong>Santosh TechWorks</strong> से कस्टम ऐप्स! 📚✨ चाहे Flutter ऐप बनवाना हो या गणित का AI ट्यूटर - सब कुछ एक ही जगह!"
-            : "<strong>Quant-Elite</strong> for education and <strong>Santosh TechWorks</strong> for custom apps! 📚✨ Need Flutter apps or math AI tutors? We've got you covered!",
+            ? `<strong>Santosh TechWorks</strong> निम्नलिखित प्रीमियम सेवाएं प्रदान करता है:<br><br>
+               • <strong>कस्टम ऐप डेवलपमेंट:</strong> Flutter और Dart के साथ हाई-परफॉरमेंस ऐप्स।<br>
+               • <strong>AI इंटीग्रेशन:</strong> आपके बिजनेस में LLM और स्मार्ट बॉट्स जोड़ना।<br>
+               • <strong>वेब आर्किटेक्चर:</strong> स्केलेबल और सुरक्षित वेबसाइट्स (जैसे यह वाली!)।<br>
+               • <strong>डेटा एनालिटिक्स:</strong> जटिल डेटा को समझने योग्य डैशबोर्ड में बदलना।<br><br>
+               क्या आप किसी प्रोजेक्ट पर चर्चा करना चाहते हैं?`
+            : `<strong>Santosh TechWorks</strong> offers a suite of premium digital services:<br><br>
+               • <strong>Custom App Development:</strong> High-performance mobile apps using Flutter & Dart.<br>
+               • <strong>AI Integration:</strong> Embedding LLMs and smart agents into existing workflows.<br>
+               • <strong>Web Architecture:</strong> Scalable, secure, and responsive web applications.<br>
+               • <strong>Cloud Solutions:</strong> Infrastructure management and optimization.<br><br>
+               Would you like to discuss a potential project?`,
 
         fallback: isHindi
-            ? "हम्म... थोड़ा कन्फ्यूज हो गया। 😅 नीचे सुझावों में से कोई एक चुन लो या संतोष जी को <strong>theuniquedawg29@gmail.com</strong> पर मेल कर दो। मैं इंतज़ार करूँगा!"
-            : "Hmm... got a bit confused there. 😅 Pick one of the suggestions below or email Santosh at <strong>theuniquedawg29@gmail.com</strong>. I'll be waiting!"
+            ? `क्षमा करें, मैं पूरी तरह समझ नहीं पाया। 😅<br><br>
+               शायद आप इनमें से कुछ ढूंढ रहे हैं:<br>
+               • Quant-Elite की विशेषताएं<br>
+               • ऐप डाउनलोड कैसे करें<br>
+               • संतोष जी के बारे में जानकारी<br><br>
+               कृपया नीचे दिए गए बटनों का उपयोग करें या फिर से पूछें!`
+            : `I'm not sure I understood that correctly. 😅<br><br>
+               You might want to ask about:<br>
+               • Features of Quant-Elite<br>
+               • How to download the app<br>
+               • About the founder, Santosh<br><br>
+               Try using the suggestion buttons below for a quicker response!`
     };
 
     if (val.includes('hello') || val.includes('hi') || val.includes('नमस्ते')) return personalResponses.greet;
@@ -228,6 +286,7 @@ function getBotResponse(input) {
 
     return personalResponses.fallback;
 }
+
 // Fixed Scroll animations
 const observerOptions = { threshold: 0.1 };
 const observer = new IntersectionObserver((entries) => {

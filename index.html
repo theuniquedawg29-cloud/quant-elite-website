@@ -372,18 +372,22 @@
             </div>
             <div id="chat-messages" class="chat-messages">
                 <div class="message bot-msg">
-                    नमस्ते! मैं सिद्धांत हूँ, आपका वेबसाइट मैनेजर। मैं आपकी कैसे मदद कर सकता हूँ? <br><br>
-                    Hello! I'm Siddhant, your Website Manager. How can I assist you today?
+                    <strong>नमस्ते! मैं सिद्धांत हूँ।</strong> 🙏<br>
+                    संतोष टेकवर्क्स में आपका स्वागत है। मैं एक AI मैनेजर हूँ और आपकी सहायता के लिए तैयार हूँ।<br><br>
+                    <strong>Hello! I'm Siddhant.</strong> 🙏<br>
+                    Welcome to Santosh TechWorks. I'm your AI assistant, ready to help you explore our services and apps.<br><br>
+                    <em>आप नीचे दिए गए विकल्पों में से चुन सकते हैं या अपना प्रश्न लिख सकते हैं।</em><br>
+                    <em>You can choose from the options below or type your query.</em>
                 </div>
             </div>
             <!-- Prebuilt Suggestions -->
-            <div class="chat-suggestions">
-                <button onclick="sendSuggestedMessage('About Quant-Elite')">What is Quant-Elite?</button>
-                <button onclick="sendSuggestedMessage('How to Download')">How to Download?</button>
-                <button onclick="sendSuggestedMessage('Contact Support')">Support Email?</button>
-                <button onclick="sendSuggestedMessage('AI Mentor')">Who is Siddhant?</button>
-                <button onclick="sendSuggestedMessage('Services')">Our Services</button>
-                <button onclick="sendSuggestedMessage('Santosh')">Who is Santosh?</button>
+            <div class="chat-suggestions" id="chat-suggestions">
+                <button onclick="sendSuggestedMessage('About Quant-Elite')">🚀 Quant-Elite</button>
+                <button onclick="sendSuggestedMessage('How to Download')">📥 Download App</button>
+                <button onclick="sendSuggestedMessage('Services')">🛠️ Services</button>
+                <button onclick="sendSuggestedMessage('Santosh')">👨‍💻 The Developer</button>
+                <button onclick="sendSuggestedMessage('Contact Support')">📧 Contact Us</button>
+                <button onclick="sendSuggestedMessage('AI Mentor')">🤖 Who is Siddhant?</button>
             </div>
             <div class="chat-input-area">
                 <input type="text" id="chat-input" placeholder="Type a message... / संदेश लिखें..." onkeypress="handleChatKey(event)">
