@@ -1,3 +1,5 @@
+# Website Banner Ads (InMobi) Placement ID: 10000670938
+# Mobile App Interstitial Ads: Managed via In-App ID
 inmobi.com, 166b17adc1974b4dbdc2691bcea7bcfb, DIRECT, 83e75a7ae333ca9d
 mintegral.com, 10003, RESELLER
 thunder-monetize.com, 3905806597, RESELLER
