@@ -131,9 +131,20 @@ function toggleChatbot() {
     const chatWindow = document.getElementById('chatbot-window');
     const chatToggle = document.getElementById('chatbot-toggle');
 
-    if (chatWindow.style.display === 'none' || chatWindow.style.display === '') {
+    if (!chatWindow || !chatToggle) return;
+
+    // Use computed style if inline style is not set
+    const currentDisplay = chatWindow.style.display || window.getComputedStyle(chatWindow).display;
+
+    if (currentDisplay === 'none') {
         chatWindow.style.display = 'flex';
         chatToggle.style.display = 'none';
+
+        // Auto-focus input when opening
+        const chatInput = document.getElementById('chat-input');
+        if (chatInput) {
+            setTimeout(() => chatInput.focus(), 300);
+        }
     } else {
         chatWindow.style.display = 'none';
         chatToggle.style.display = 'flex';
